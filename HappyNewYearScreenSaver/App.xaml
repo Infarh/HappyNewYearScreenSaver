@@ -1,9 +1,5 @@
 ﻿<Application x:Class="HappyNewYearScreenSaver.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:HappyNewYearScreenSaver"
-             StartupUri="MainWindow.xaml">
-    <Application.Resources>
-         
-    </Application.Resources>
-</Application>
+             xmlns:l="clr-namespace:HappyNewYearScreenSaver"
+             StartupUri="MainWindow.xaml"/>
