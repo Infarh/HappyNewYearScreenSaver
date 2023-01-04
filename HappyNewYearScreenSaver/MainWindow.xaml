@@ -6,7 +6,6 @@
         xmlns:l="clr-namespace:HappyNewYearScreenSaver"
         Topmost="True"
         WindowStyle="None"
-        WindowState="Maximized"
         Title="Happy New Year!!!"
         Width="800" Height="450">
     <Window.Resources>
