@@ -6,10 +6,15 @@
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
     <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationIcon>img\christmas_tree.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
-    <Using Include="HappyNewYearScreenSaver.Extensions"/>
+    <Content Include="img\christmas_tree.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="HappyNewYearScreenSaver.Extensions" />
   </ItemGroup>
 
 </Project>
