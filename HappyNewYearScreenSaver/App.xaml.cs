@@ -62,4 +62,19 @@ public partial class App
             }
         }
     }
+
+    private static Window CreateWindow(nint ParentHandle)
+    {
+        var window = new MainWindow();
+
+        if (ParentHandle == default)
+        {
+            window.Loaded    += (s, _) => ((Window)s).WindowState = WindowState.Maximized;
+            window.MouseDown += (_, _) => Current.Shutdown();
+
+            return window;
+        }
+
+        return null;
+    }
 }
