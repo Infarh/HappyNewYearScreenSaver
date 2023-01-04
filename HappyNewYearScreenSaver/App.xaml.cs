@@ -1,5 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Interop;
+using HappyNewYearScreenSaver.API;
 using HappyNewYearScreenSaver.API.pInvoke;
 
 namespace HappyNewYearScreenSaver;
@@ -61,8 +62,21 @@ public partial class App
                     break;
 
                 case Mode.FullScreen:
+                    CerateMainWindows(parent_handle);
                     break;
             }
+        }
+    }
+
+    private static void CerateMainWindows(nint ParentHandle)
+    {
+        foreach (var (left, top, width, height) in Screen.AllScreens.Select(s => s.Bounds))
+        {
+            var window = CreateWindow(ParentHandle);
+
+            (window.Left, window.Top, window.Width, window.Height) = (left, top, width, height);
+
+            window.Show();
         }
     }
 
